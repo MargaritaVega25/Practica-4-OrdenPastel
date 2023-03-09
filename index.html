@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario de pedido de pasteles</title>
+        <meta charset="UTF-8">
+        <link rel='stylesheet' href="css/estilo1.css">
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">-->       
+    </head>
+    <body> <!-- probar con post--> 
+        <form method ="get" action="captura.php">
+        <table>
+            <tr>
+                <td>
+                    <label for="txtNombre">Nombre Completo:</label>
+                </td>
+                <td>
+                    <input type="text" id="idNombre" name="txtNombre" autofocus required/>
+                </td>
+                <td>
+                    <label for="txtColor">Color del betún:</label>
+                </td>
+                <td>   
+                    <input type="color" id="idColor" name="txtColor"/>
+                    <input type="color" id="idColor2" name="txtColor2" list="colores"/>
+                    <datalist id="colores"/>
+                       <option value="#F08080" label="Coral_claro"/>
+                       <option value="#BD7093" label="Violeta_claro"/>
+                       <option value="#32CD32" label="Verde_lima"/>
+                       <option value="#66CDAA" label="Aguamarina_medio"/>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtArchivo">Foto de personalización:</label>
+                </td>
+                <td>
+                    <input type="file" id="idArchivo" name="txtArchivo" accept="image/gif, image/png"/>
+                </td>
+                <td>
+                    <label for="txtEdad"> Personas: </label>
+                </td>
+                <td>
+                    1
+                    <input type="range" id="idRango" name="txtEdad" min="1" max="30"/>
+                    30
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                     <label for="txtNum">Cantidad de piezas: </label>
+                </td>
+                <td>
+                    <input type="number" id="idNum" name="txtNum" min="1" max="10"/>
+                </td> 
+                <td>
+                    <label for="txtCorreo">Dirección de entrega: </label>
+                </td>
+                <td>
+                    <input type="email" id="idCorreo" name="txtCorreo"/>
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                    <label for="txtNumber">Numero de telefono: </label>
+                </td>
+                <td>
+                    <input type="url" id="idURL" name="txtNumero"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtOpc">Repostería: </label>
+                </td>
+                <td>
+                    <input list="1opciones" id="idMat" name="txtMat"> 
+                    <datalist id="1opciones">
+                        <option value="Pasteles simples"/>
+                        <option value="Donas"/>
+                        <option value="Panqués"/>
+                    </datalist>
+                </td>
+                <td>
+                    <label for="txtFecha">Fecha de entrega </label>
+                </td>
+                <td>
+                    <input type="date" id="idFecha" name="txtFecha">
+                     <input type="time" id="idhr" name="txtHr">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                      <label for="listPasaTiempos">Tipos de pasteles </label>
+                </td>
+                <td>
+                    <select size="6" multiple id="idPasaTiempos" name="listPasaTiempos">
+                        <optgroup label="Descanso" >
+                            <option value="d">Dormir</option>
+                            <option value="l">Leer</option>
+                            <option value="v">Ver T.V.</option>
+                        </optgroup>
+                        <optgroup label="Activo" >
+                            <option value="c">Correr</option>
+                            <option value="a">Andar en Bicicleta</option>
+                            <option value="n">Nadar</option>    
+                        </optgroup>    
+                    </select>
+                </td>
+                <td>   
+                    <label for="list2PasaTiempos">Elige el mejor pasatiempo: </label>
+                </td>
+            <td>
+                <select id="id2PasaTiempos" name="list2PasaTiempos">
+                    <option value="d">Dormir</option>
+                    <option value="l">Leer</option>
+                    <option value="v">Ver T.V.</option>
+                    <option value="c">Correr</option>
+                    <option value="a">Andar en Bicicleta</option>
+                    <option value="n">Nadar</option>  
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtComent">Observaciones: </label>
+                </td>
+                <td>
+                    <textarea id="idComent" name="txtComent" cols="40" rows="3">
+                     
+                    </textarea>
+                </td>
+                <td>
+                    <label for="txtBusca">Buscar codigo de producto: </label>
+                </td>
+                <td>
+                    <input type="search" id="idBusqueda" name="txtBusqueda" value="algo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Opciones: </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="idOp1" name="txtOp" value="v1">
+                    <label for="idOp1">Opci&oacute;n 1: </label>
+                    <input type="checkbox" id="idOp2" name="txtOp" value="v2">
+                    <label for="idOp2">Opci&oacute;n 2: </label>
+                    <input type="checkbox" id="idOp3" name="txtOp" value="v3">
+                    <label for="idOp3">Opci&oacute;n 3: </label>
+                </td>
+                <td>
+                    <label for="met">Solicitar factura</label>
+                </td>
+                <td>
+                    <input type="radio" id="idradio1" name="txtradio" value="izq">
+                    <label for="idOp1">Si</label>
+                    <input type="radio" id="idradio2" name="txtradio" value="der">
+                    <label for="idOp2">No</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                 <input type="submit" value="enviar" name="ntnEnviar" />    
+                </td>
+                <td colspan="2">
+                    <button type="reset" value="Limpiar" name="ntnLimpiar" />Limpiar Formulario</button>  
+                </td>
+            </tr>
+        </table>
+    </form>  
+   </body>
+</html>
