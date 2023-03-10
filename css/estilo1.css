@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 html {
-    background: #B4E4FF;
+    background: #DFFFD8 ;
     scroll-behavior: smooth;
     font-family: 'Josefin Sans', sans-serif;
 }
+header {
+    text-decoration-color: chocolate;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    background: #F7C8E0 ;
+}
+.titulo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xx-large;
+ 
+}
+
+.logo{
+ display: block;
+ margin: 0 auto;
+
+}
+
+form {
+    margin: 0 auto;
+    width: 50%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 label {
     display: block;
@@ -22,3 +53,10 @@ label {
 .form{
     text-align: center;
 }
+
+/* Paleta de colores
+#F7C8E0 Rosado
+#DFFFD8 Amariverde suave
+#B4E4FF Azul suave
+#95BDFF Azul profundo
+*/

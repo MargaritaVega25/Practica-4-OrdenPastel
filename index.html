@@ -3,10 +3,14 @@
     <head>
         <title>Formulario de pedido de pasteles</title>
         <meta charset="UTF-8">
-        <link rel='stylesheet' href="css/estilo1.css">
+        <link rel="stylesheet" href="css/estilo1.css">
        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">-->       
     </head>
     <body> <!-- probar con post--> 
+        <header> 
+        <div class="logo"><img src="img/pas.png" width="120"> </div>
+        <h2 class="titulo">REPOSTERÍA MARGARITA</h2>
+    </header>
         <form method ="get" action="captura.php">
         <table>
             <tr>
@@ -57,7 +61,7 @@
                     <label for="txtCorreo">Dirección de entrega: </label>
                 </td>
                 <td>
-                    <input type="email" id="idCorreo" name="txtCorreo"/>
+                    <input type="text" id="idDireccion" name="txDireccion"/>
                 </td>
             </tr> 
             <tr>
@@ -65,7 +69,7 @@
                     <label for="txtNumber">Numero de telefono: </label>
                 </td>
                 <td>
-                    <input type="url" id="idURL" name="txtNumero"/>
+                    <input type="number" id="idNumeroTel" name="idNumeroTel"/>
                 </td>
             </tr>
             <tr>
@@ -77,7 +81,6 @@
                     <datalist id="1opciones">
                         <option value="Pasteles simples"/>
                         <option value="Donas"/>
-                        <option value="Panqués"/>
                     </datalist>
                 </td>
                 <td>
@@ -85,42 +88,54 @@
                 </td>
                 <td>
                     <input type="date" id="idFecha" name="txtFecha">
-                     <input type="time" id="idhr" name="txtHr">
                 </td>
             </tr>
             <tr>
                 <td>
-                      <label for="listPasaTiempos">Tipos de pasteles </label>
+                      <label for="tiposPasteles">Tipos de pasteles </label>
                 </td>
                 <td>
-                    <select size="6" multiple id="idPasaTiempos" name="listPasaTiempos">
-                        <optgroup label="Descanso" >
-                            <option value="d">Dormir</option>
-                            <option value="l">Leer</option>
-                            <option value="v">Ver T.V.</option>
+                    <select size="8" multiple id="idPasaTiempos" name="listPasaTiempos">
+                        <optgroup label="Pasteles de mantequilla" >
+                            <option value="d">Pastel clasico amarillo</option>
+                            <option value="l">Pastel alemán de chocolate</option>
                         </optgroup>
-                        <optgroup label="Activo" >
-                            <option value="c">Correr</option>
-                            <option value="a">Andar en Bicicleta</option>
-                            <option value="n">Nadar</option>    
+                        <optgroup label="Pasteles de espuma" >
+                            <option value="c">Pastel de 3 leches</option>
+                            <option value="n">Pastel de ángel</option>    
+                        </optgroup>    
+                     <optgroup label="Donas" >
+                            <option value="c">Donas clasicas</option>
+                            <option value="n">Donas de limónl</option>    
                         </optgroup>    
                     </select>
                 </td>
                 <td>   
-                    <label for="list2PasaTiempos">Elige el mejor pasatiempo: </label>
+                    <label for="list2PasaTiempos">Elige una fruta en almivar</label>
                 </td>
             <td>
                 <select id="id2PasaTiempos" name="list2PasaTiempos">
-                    <option value="d">Dormir</option>
-                    <option value="l">Leer</option>
-                    <option value="v">Ver T.V.</option>
-                    <option value="c">Correr</option>
-                    <option value="a">Andar en Bicicleta</option>
-                    <option value="n">Nadar</option>  
+                    <option value="d">Manzana</option>
+                    <option value="l">Fresa</option>
+                    <option value="v">Durazno</option>
+                    <option value="c">Platano</option>  
                 </select>
             </td>
             </tr>
-            <tr>
+            
+            
+                <td>
+                    <label> Adornos: </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="idOp1" name="txtOp" value="v1"> Feliz cumpleaños
+                    <label for="idOp1"> </label>
+                    <input type="checkbox" id="idOp2" name="txtOp" value="v2"> Feliz aniversario
+                    <label for="idOp2"> </label>
+                    <input type="checkbox" id="idOp3" name="txtOp" value="v3"> Ninguno
+                    <label for="idOp3"> </label>
+                </td>
+                <tr>
                 <td>
                     <label for="txtComent">Observaciones: </label>
                 </td>
@@ -129,35 +144,16 @@
                      
                     </textarea>
                 </td>
-                <td>
-                    <label for="txtBusca">Buscar codigo de producto: </label>
-                </td>
-                <td>
-                    <input type="search" id="idBusqueda" name="txtBusqueda" value="algo">
-                </td>
             </tr>
-            <tr>
-                <td>
-                    <label> Opciones: </label>
-                </td>
-                <td>
-                    <input type="checkbox" id="idOp1" name="txtOp" value="v1">
-                    <label for="idOp1">Opci&oacute;n 1: </label>
-                    <input type="checkbox" id="idOp2" name="txtOp" value="v2">
-                    <label for="idOp2">Opci&oacute;n 2: </label>
-                    <input type="checkbox" id="idOp3" name="txtOp" value="v3">
-                    <label for="idOp3">Opci&oacute;n 3: </label>
-                </td>
                 <td>
                     <label for="met">Solicitar factura</label>
                 </td>
                 <td>
-                    <input type="radio" id="idradio1" name="txtradio" value="izq">
-                    <label for="idOp1">Si</label>
-                    <input type="radio" id="idradio2" name="txtradio" value="der">
-                    <label for="idOp2">No</label>
+                    <input type="radio" id="idradio1" name="txtradio" value="izq"> Si
+                    <label for="idOp1"> </label>
+                    <input type="radio" id="idradio2" name="txtradio" value="der"> No
                 </td>
-            </tr>
+            
             <tr>
                 <td colspan="2">
                  <input type="submit" value="enviar" name="ntnEnviar" />    
